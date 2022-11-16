@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        display: flex;
+        background-color: skyblue;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="xmas">
+        <img
+          alt="christmas tree"
+          src="https://th.bing.com/th/id/OIP.Epxw6yUuF5zQEn9eYelwfwHaKC?pid=ImgDet&rs=1"
+        />
+      </div>
+    </div>
+    <script>
+      // Get the current date
+      let today = new Date();
+
+      // Get the year of the current date
+      let christmasYear = today.getFullYear();
+
+      // Check if the current date is
+      // already past by checking if the month
+      // is December and the current day
+      // is greater than 25
+      if (today.getMonth() == 11 && today.getDate() > 25) {
+        // Add an year so that the next
+        // Christmas date could be used
+        christmasYear = christmasYear + 1;
+      }
+
+      // Get the date of the next Christmas
+      let christmasDate = new Date(christmasYear, 11, 25);
+
+      // Get the number of milliseconds in 1 day
+      let dayMilliseconds = 1000 * 60 * 60 * 24;
+
+      // Get the remaining amount of days
+      let remainingDays = Math.ceil(
+        (christmasDate.getTime() - today.getTime()) / dayMilliseconds
+      );
+
+      // Write it to the page
+      document.write(`Christmas In ${remainingDays} days !`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="TF-8" />
+
+    <title>Car Details</title>
+    <script defer src="./java.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #CarDetails {
+        display: flex;
+        flex-direction: column;
+      }
+      body {
+        line-height: 1.5;
+      }
+
+      .box2 {
+        width: 50%;
+        border: solid 3px black;
+        padding: 10px 20px;
+      }
+      img {
+        width: 50%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="CarDetails">
+      <div class="box1">
+        <img
+          class="img"
+          src="https://farm3.staticflickr.com/2816/33417294480_ccd1b12e0c_o.jpg"
+          alt="toyota Car"
+        />
+      </div>
+      <div class="box2">
+        <label id="Manufacturer"></label><br />
+        <label id="MakeAndModel"></label><br />
+        <label id="Engine"></label><br />
+        <label id="BodyStyle"></label><br />
+      </div>
+    </div>
+  </body>
+</html>
